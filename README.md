@@ -96,42 +96,42 @@ neurology
  Implementing Code Standards
 
 I am now focusing on eliminating duplicated code by creating reusable functions, and handling errors explicitly with clear messages.
+```
 
 **1\. Use nomes significativos e elimine "números mágicos"**
 
-* **Revele a intenção no nome:** Evite variáveis com nomes genéricos ou abreviações obscuras (como `d`, `x`, `info` ou `h`)[1][2].
-* **Não tenha medo de nomes descritivos:** A clareza da intenção do código é muito mais importante do que economizar caracteres[1].
-* **Substitua valores soltos por constantes nomeadas:** Em vez de deixar números soltos no meio da lógica (ex: `8760`), atribua o valor a uma constante explicativa (ex: `TOTAL_HOURS_IN_A_YEAR`)[1][5].
-* **Siga convenções de nomenclatura:** Use verbos para nomear funções e métodos (`calcularTotalDoCarrinho()`, `exibirMensagem()`) e substantivos para variáveis e classes[4].
+- **Revele a intenção no nome:** Evite variáveis com nomes genéricos ou abreviações obscuras (como `d`, `x`, `info` ou `h`)[1][2].
+- **Não tenha medo de nomes descritivos:** A clareza da intenção do código é muito mais importante do que economizar caracteres[1].
+- **Substitua valores soltos por constantes nomeadas:** Em vez de deixar números soltos no meio da lógica (ex: `8760`), atribua o valor a uma constante explicativa (ex: `TOTAL_HOURS_IN_A_YEAR`)[1][5].
+- **Siga convenções de nomenclatura:** Use verbos para nomear funções e métodos (`calcularTotalDoCarrinho()`, `exibirMensagem()`) e substantivos para variáveis e classes[4].
 
 **2\. Escreva funções pequenas com responsabilidade única (SRP)**
 
-* **Uma única tarefa:** Cada função ou método deve fazer **apenas uma coisa, de forma simples e bem-feita**[8].
-* **Extraia subfunções:** Se uma função possui múltiplos níveis de aninhamento ou faz várias coisas sequencialmente, divida-a em funções menores e bem nomeadas[9].
+- **Uma única tarefa:** Cada função ou método deve fazer **apenas uma coisa, de forma simples e bem-feita**[8].
+- **Extraia subfunções:** Se uma função possui múltiplos níveis de aninhamento ou faz várias coisas sequencialmente, divida-a em funções menores e bem nomeadas[9].
 
 **3\. Substitua comentários por código autoexplicativo**
 
-* **Código limpo se explica:** Se você sente necessidade de comentar para explicar o que um trecho de código faz, prefira renomear variáveis/funções ou refatorar o trecho até que ele se torne inteligível sozinho[3].
-* **Comente apenas o "porquê":** Use comentários com moderação, focando em explicar decisões de negócio não óbvias ou restrições do sistema, e não o funcionamento técnico básico do algoritmo[15].
+- **Código limpo se explica:** Se você sente necessidade de comentar para explicar o que um trecho de código faz, prefira renomear variáveis/funções ou refatorar o trecho até que ele se torne inteligível sozinho[3].
+- **Comente apenas o "porquê":** Use comentários com moderação, focando em explicar decisões de negócio não óbvias ou restrições do sistema, e não o funcionamento técnico básico do algoritmo[15].
 
 **4\. Elimine blocos** **else** **desnecessários e aninhamentos profundos**
 
-* **Aplique Cláusulas Guarda (** **Guard Clauses** **) / Retorno Precoce:** Verifique condições de erro ou casos de borda logo no início da função e retorne imediatamente[19][20]. Isso evita criar blocos `else` extensos e reduz a profundidade de aninhamento do código[19].
-* **Encapsule condições complexas:** Em vez de colocar expressões lógicas longas dentro do `if`, atribua o resultado a uma variável com nome explicativo ou crie uma função booleana auxiliar[22].
+- **Aplique Cláusulas Guarda (** **Guard Clauses** **) / Retorno Precoce:** Verifique condições de erro ou casos de borda logo no início da função e retorne imediatamente[19][20]. Isso evita criar blocos `else` extensos e reduz a profundidade de aninhamento do código[19].
+- **Encapsule condições complexas:** Em vez de colocar expressões lógicas longas dentro do `if`, atribua o resultado a uma variável com nome explicativo ou crie uma função booleana auxiliar[22].
 
 **5\. Evite duplicação de código (Princípio DRY -** **Don't Repeat Yourself** **)**
 
-* Se você perceber que está copiando e colando trechos semelhantes em lugares diferentes do projeto, extraia essa lógica para um método ou módulo reutilizável[9].
+- Se você perceber que está copiando e colando trechos semelhantes em lugares diferentes do projeto, extraia essa lógica para um método ou módulo reutilizável[9].
 
 **6\. Trate erros de forma explícita**
 
-* **Nunca engula exceções silenciosamente:** Evite blocos `try-catch` vazios que ignoram erros[28][29].
-* Trate exceções fornecendo mensagens contextualizadas e logs adequados, garantindo que falhas sejam fáceis de diagnosticar[18].
+- **Nunca engula exceções silenciosamente:** Evite blocos `try-catch` vazios que ignoram erros[28][29].
+- Trate exceções fornecendo mensagens contextualizadas e logs adequados, garantindo que falhas sejam fáceis de diagnosticar[18].
 
 **7\. Pratique a Regra do Escoteiro**
 
-* Sempre deixe o trecho de código em que você está trabalhando **mais limpo do que quando você o encontrou**[32]. Melhorias contínuas e pontuais — como renomear uma variável confusa ou quebrar um método grande — reduzem a dívida técnica sem exigir grandes interrupções no desenvolvimento[32]
-```
+- Sempre deixe o trecho de código em que você está trabalhando **mais limpo do que quando você o encontrou**[32]. Melhorias contínuas e pontuais — como renomear uma variável confusa ou quebrar um método grande — reduzem a dívida técnica sem exigir grandes interrupções no desenvolvimento[32]
 
 #### O link do notebook compartilhado.
 
